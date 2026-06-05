@@ -1,0 +1,79 @@
+{
+    "layer": "top",
+
+    "height": 42,
+    "spacing": 12,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "cpu",
+        "memory",
+        "wireplumber",
+        "network"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+
+    "clock": {
+        "timezone": "America/Los_Angeles",
+        "format": "{:%a %B %d, %R}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3
+        }
+    },
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "cpu": {
+        "format": "   {usage}%",
+        "interval": 8
+    },
+
+    "memory": {
+        "format": "   {percentage}%",
+        "tooltip-format": "{used} GiB / {total} GiB",
+        "interval": 8
+    },
+
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  muted",
+        "format-icons": [
+            "󰕿",
+            "󰖀",
+            "󰕾"
+        ],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "network": {
+        "format-wifi": "{icon}",
+        "format-disconnected": "󰤮",
+        "format-icons": [
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-disconnected": "Disconnected"
+    }
+}
