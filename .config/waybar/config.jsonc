@@ -29,6 +29,7 @@
     },
 
     "clock": {
+        "locale": "en_US.UTF-8",
         "timezone": "America/Los_Angeles",
         "format": "{:%a %B %d, %R}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
