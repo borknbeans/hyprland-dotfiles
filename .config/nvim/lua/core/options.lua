@@ -9,3 +9,9 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.mouse = "a"
 vim.g.mapleader = " "
+
+-- Folding
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99 -- start with everything unfolded
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
